@@ -1,0 +1,16 @@
+<%= link_to("<<Back to index", {:action => 'index', :page_id => @page.id}, :class => 'back_link') %>
+
+<div class="new">
+	<span class="h1">Create Section</span>
+
+	<%= form_for(:section, :url => {:action => 'create', :page_id => @page.id}) do |f| %>
+		
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+
+		<div class="form-buttons">
+			<%= submit_tag("Create section") %>
+		</div>
+
+	<% end %>
+</div>
+

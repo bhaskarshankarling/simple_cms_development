@@ -1,0 +1,33 @@
+<% @page_title = "Subjects" %>
+<%= link_to("<<Back to menu",{:controller => 'access', :action => 'index'}, :class => 'back_link') %>
+<div class="index">
+	<span class="h1">Subjects</span>
+
+	<%= link_to("Add New Subject", {:action => 'new'}, :class => "actions") %>
+	
+	<table class="listing" summary="Subject list">
+		<tr class="headers">
+			<th>&nbsp;</th>
+			<th>Subject</th>
+			<th>Visible</th>
+			<th>Pages</th>
+			<th>Actions</th>
+		</tr>	
+
+		<% @subjects.each do |subject| %>
+			<tr class="<%= cycle('odd','even') %>">
+				<td><%= subject.position %></td>
+				<td><%= subject.name %></td>
+				<td class="center"><%= status_tag(subject.visible) %></td>
+				<td class="center"><%= subject.pages.size %></td>
+				<td class="action">
+					<%= link_to("View pages", { :controller => 'pages', :subject_id => subject.id }, :class_name => 'action show') %>
+					<%= link_to("Show", { :action => 'show', :id => subject.id }, :class_name => 'action show') %>
+					<%= link_to("Edit", { :action => 'edit', :id => subject.id }, :class_name => 'action edit' ) %>
+					<%= link_to("Delete", { :action => 'delete', :id => subject.id}, :class_name => 'action delete') %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+

@@ -1,0 +1,34 @@
+<div class="index">
+<%= link_to("<<Back to pages",{:controller => 'pages', :action => 'index', :subject_id => @page.subject_id }, :class => 'back_link') %>
+	<span class="h1">Sections</span>
+
+	<%= link_to("Add new sections", {:action => 'new', :page_id => @page.id}, :class => 'actions') %>
+
+	<table class="listing" summary="Sections list">
+		<tr class="headers">
+			<th>&nbsp;</th>
+			<th>Page</th>
+			<th>Section</th>
+			<th>Visible</th>
+			<th>Content_type</th>
+			<th>Content</th>
+			<th>Actions</th>
+		</tr>
+
+		<% @sections.each do |section| %>
+			<tr class="<%= cycle('odd','even') %>">
+				<td><%= section.position %></td>
+				<td><%= section.page.name if section.page%></td>
+				<td><%= section.name %></td>
+				<td class="center"><%= status_tag(section.visible) %></td>
+				<td><%= section.content_type %></td>
+				<td><%= section.content %></td>
+				<td class="action">
+					<%= link_to("Show", { :action => 'show', :id => section.id, :page_id => @page.id}, :class_name => 'action show') %>
+					<%= link_to("Edit", { :action => 'edit', :id => section.id, :page_id => @page.id }, :class_name => 'action edit') %>
+					<%= link_to("Delete", { :action => 'delete', :id => section.id, :page_id => @page.id }, :class_name => 'action delete') %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

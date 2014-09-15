@@ -1,0 +1,161 @@
+#content { 
+	padding-left: 100px; 
+	padding-right: 100px; 
+	padding-top: 50px;
+}
+
+.index .actions { 
+	float: right; 
+	margin: 0 0 1em 1em;
+    background: #94B26F; 
+    color: #4C2516;  
+    border: 1px solid #4C2516;
+    text-decoration: none; 
+    text-align: center; 
+    padding: 1px 2px; 
+    margin: 2px 5px; 
+    font-size: 0.7em;  
+}
+
+.action a {  
+	float: left;
+	white-space: nowrap;
+	padding: 2px 5px;
+	margin: 0.2em 0.2em 0.2em 0.5em;
+    background: #94B26F; 
+    color: #4C2516;  
+    border: 1px solid #4C2516;
+    text-decoration: none; 
+    font-size: 0.8em; 
+    text-align: center;
+}
+
+.action {
+	width: 25%;
+}
+
+.action a:hover { 
+	background: #B6D491; 
+}
+
+.form-buttons{
+	text-align: center;
+	margin-top: 20px;
+}
+
+td .form-buttons{
+	padding-top: 10px;
+}
+
+.form-buttons input, .back_link {
+	padding: 2px 5px;
+	background: #94B26F; 
+    color: #4C2516;  
+    border: 1px solid #4C2516;
+    text-decoration: none; 
+    font-size: 0.8em; 
+}
+
+.notice {
+	height: 1.25em; 
+	padding: 0.5em; 
+	text-align: center;
+  	background: #B6D491; 
+  	color: #4C2516;
+}
+
+
+.index table {
+	table-layout: auto;
+	clear: both;
+	width: 100%;
+}
+
+.listing td { 
+	border: 1px solid #666666;
+	vertical-align: middle;
+}
+
+.show table {
+	clear: both; 
+	margin: 20px 400px 0px 392px; 
+	width: 300px;
+}
+
+.show table td{
+	border: 1px solid #666666;
+}
+
+.edit table, .new table { 
+	margin: 20px 400px 0px 400px; 
+}
+
+span.status { 
+	display: block; 
+	width: 10px; 
+	height: 10px;
+    margin: 0.25em auto; 
+    padding: 0; 
+    border: 1px solid #000000; 
+}
+span.status.true  { 
+	background: green; 
+	color: green; 
+}
+span.status.false { 
+	background: red; 
+	color: red; 
+}
+
+.fiel_with_errors { 
+}
+
+.field_with_errors label { 
+	color: #AA0000; 
+}
+
+.field_with_errors input { 
+	border: 1px solid #AA0000;
+	background-color: #F9CFCF;
+}
+
+#errorExplanation { 
+	width: 400px; 
+	padding: 0; 
+	margin: 0 auto 1.5em;
+    border: 1px solid #AA0000; 
+    background-color: #FFFFFF; 
+    font-size: 12px; 
+}
+
+#errorExplanation h2 { 
+	font-weight: bold; 
+	font-size: 12px;
+  	padding: 5px 5px 5px 15px; 
+  	margin: 0; 
+  	width: 380px;
+  	background-color: #AA0000; 
+  	color: #FFFFFF; 
+  }
+
+#errorExplanation p { 
+	color: #333333; 
+	margin: 0; 
+	padding: 3px 0.5em; 
+}
+
+#errorExplanation ul { 
+	margin-top: 0; 
+}
+
+#errorExplanation ul li { 
+	list-style: square; 
+}
+
+.login form { margin: 100px 400px; }
+.menu .identity { text-align: center; }
+.menu ul { margin: 3em 450px; list-style: square; }
+.menu ul li { margin-bottom: 1em; }
+
+.odd { background: #E5CE69; }
+.even { background: none; }
